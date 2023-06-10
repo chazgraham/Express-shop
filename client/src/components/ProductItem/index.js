@@ -8,11 +8,24 @@ import { ADD_TO_CART, UPADTE_CART_QUANTITY } from "../../utils/actions";
 function ProductItem(item) {
 
   const [ state, dispatch] = useStoreContext();
+  const { cart } = state;
   const addToCart = () => {
-    dispatch({
-      type: ADD_TO_CART,
-      product: { ...item, purchaseQuantity: 1},
-    });
+    // find the cartitem with the matchinf id
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id);
+
+    // if there was a match, call update with a new purchase quantity
+    if (itemInCart) {
+      dispatch({
+        type: UPADTE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: {...item, purchaseQuantity: 1}
+      });
+    }
   };
 
   const {
