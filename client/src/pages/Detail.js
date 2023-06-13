@@ -12,7 +12,6 @@ import {
   ADD_TO_CART,
   UPDATE_PRODUCTS,
 } from "../utils/actions";
-import CartItem from '../components/CartItem';
 
 function Detail() {
   const [ state, dispatch ] = useStoreContext();
@@ -36,7 +35,7 @@ function Detail() {
   }, [products, data, dispatch, id]);
 
   const addToCart = () => {
-    const itemInCart = cart.find((cartItem) => cartItem._id === id);
+    const itemInCart = cart.find((CartItem) => CartItem._id === id);
 
     if (itemInCart) {
       dispatch({
