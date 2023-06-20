@@ -26,6 +26,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
+  min-height: 100vh;
 }
 
 h1,
@@ -70,7 +71,7 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: var(--primary);
   text-decoration: none;
   font-weight: bold;
 }
@@ -79,12 +80,21 @@ a:hover {
   text-decoration: underline;
 }
 
+.footer-link {
+  font-weight: lighter;
+}
+
 header {
   background: var(--primary);
 }
 
 header a {
   color: var(--light);
+}
+
+li {
+  list-style: none;
+  padding-left: 100px;
 }
 
 button {
@@ -110,6 +120,7 @@ button[disabled] {
 
 img {
   max-width: 100%;
+  border: #272f32 solid .5px;
 }
 
 span[role="img"] {
@@ -139,11 +150,15 @@ input:focus {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  min-height: 93vh;
+  padding-bottom: 20px;
 }
 
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .space-between {
@@ -167,6 +182,7 @@ input:focus {
 .my-1 {
   margin-top: var(--spacing-one);
   margin-bottom: var(--spacing-one);
+  text-align: center;
 }
 
 .my-2 {
@@ -197,6 +213,16 @@ input:focus {
 .card {
   width: 25%;
   text-align: center;
+  border-bottom: rgb(199, 197, 197) solid 1px;
+  margin: 2px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .error-text {
@@ -206,5 +232,8 @@ input:focus {
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  }
+  .category-menu {
+    margin: 2px;
   }
 }

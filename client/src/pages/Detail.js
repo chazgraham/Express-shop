@@ -13,6 +13,7 @@ import {
   UPDATE_PRODUCTS,
 } from "../utils/actions";
 import { idbPromise } from '../utils/helpers';
+import Footer from '../components/Footer';
 
 function Detail() {
   const [ state, dispatch ] = useStoreContext();
@@ -91,7 +92,10 @@ function Detail() {
           <Link to="/">← Back to Products</Link>
 
           <h2>{currentProduct.name}</h2>
-
+          <img
+            src={`/images/${currentProduct.image}`}
+            alt={currentProduct.name}
+          />
           <p>{currentProduct.description}</p>
 
           <p>
@@ -103,14 +107,10 @@ function Detail() {
               >Remove from Cart
             </button>
           </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
+      <Footer />
     </>
   );
 }
