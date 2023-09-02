@@ -34,12 +34,12 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="nav_link">
             <Link to="/signup">
               Signup
             </Link>
           </li>
-          <li className="mx-1">
+          <li className="nav_link">
             <Link to="/login">
               Login
             </Link>
@@ -50,7 +50,7 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
+    <header className="flex-nav px-1">
       <h1 onClick={() => {
         handleClick()
       }}>

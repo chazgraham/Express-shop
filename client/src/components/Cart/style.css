@@ -35,13 +35,13 @@
     position: fixed;
     top: 1%;
     right: 1%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     background-color: var(--light);
     border-radius: 50%;
     padding: .24rem;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .cart-closed:hover {
@@ -59,17 +59,3 @@
     margin: 0 .5rem 1rem 0;
 }
 
-@media screen and (max-width: 768px) {
-    .cart {
-        position: relative;
-        max-width: 100%;
-        max-height: auto;
-        box-shadow: none;
-        background-color: inherit;
-    }
-
-    .cart-closed {
-        position: relative;
-        margin: 0 auto;
-    }
-}
