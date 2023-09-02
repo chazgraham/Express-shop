@@ -4,6 +4,7 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
+import { Link } from "react-router-dom";
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -11,6 +12,7 @@ function CategoryMenu() {
   const { categories } = state;
 
   const {loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+  console.log(categories)
 
   useEffect(() => {
     // if categoryData exists or has changed from the response of useQuery, then run dispatch()
@@ -40,11 +42,12 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <h2>Choose a Category:</h2>
+    <div className='category_menu'>
+      <h2 className='category_h2'>Category:</h2>
+      <button className='category_button' onClick={() => { handleClick('')}}>All</button>
       {categories.map(item => (
         <button
-          className='category-menu'
+          className='category_button'
           key={item._id}
           onClick={() => {
             handleClick(item._id);

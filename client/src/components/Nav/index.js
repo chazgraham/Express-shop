@@ -55,7 +55,6 @@ function Nav() {
         handleClick()
       }}>
         <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
           Express-Shop
         </Link>
       </h1>

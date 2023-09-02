@@ -92,6 +92,22 @@ header a {
   color: var(--light);
 }
 
+.category_menu {
+  float: left;
+  margin-right: 20px;
+  border-right: 1px solid gray;
+  height: 100vh;
+}
+
+.category_h2 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.category_button {
+  display: block;
+  margin: 10px;
+}
+
 li {
   list-style: none;
   padding-left: 100px;
@@ -106,7 +122,7 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: rgb(123, 113, 255);
 }
 
 button:hover {
@@ -146,7 +162,7 @@ input:focus {
 }
 
 .container {
-  width: 85%;
+  width: 95%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
