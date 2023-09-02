@@ -1,8 +1,8 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import { UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 import { useStoreContext } from "../../utils/GlobalState";
+import { UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 
 function Nav() {
   const [, dispatch] = useStoreContext();
@@ -55,11 +55,11 @@ function Nav() {
         handleClick()
       }}>
         <Link to="/">
-          Express-Shop
+          <span role="img" aria-label="shopping bag">⌂</span>
         </Link>
       </h1>
-
       <nav>
+        
         {showNavigation()}
       </nav>
     </header>

@@ -14,10 +14,10 @@ function Footer() {
     };
     return (
         <footer>
-            <li onClick={() => {
+            <li className="footer-link" onClick={() => {
                 handleClick()
             }}>
-                <Link to="/">
+                <Link className="footer-link" to="/">
                     Home
                 </Link>
             </li>
