@@ -46,9 +46,11 @@ function ProductList() {
     return state.products.filter(product => product.category._id === currentCategory);
   }
 
+  const displayedCategory = state.categories.filter(category => category._id === currentCategory)
+
   return (
     <div className="my-2">
-      <h2 className='products_h2'>Products:</h2>
+      <h2 className='products_h2'>Available {displayedCategory[0]?.name || 'inventory'}:</h2>
       {state.products.length ? (
         <div className="flex-row">
           {filterProducts().map((product) => (
