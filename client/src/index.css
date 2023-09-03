@@ -121,6 +121,12 @@ header a {
   margin: 10px;
 }
 
+.active {
+  display: block;
+  margin: 10px;
+  background-color: rgb(154, 208, 255);
+}
+
 .products_h2 {
   text-align: center;
 }
@@ -180,7 +186,7 @@ input:focus {
 
 .container {
   margin-left: 30px;
-  margin-right: auto;
+  margin-right: 30px;
   position: relative;
   min-height: 90vh;
   padding-bottom: 20px;
